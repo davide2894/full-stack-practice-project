@@ -53,6 +53,25 @@ Flusso:
   1. front-end: e2e
   2. back-end: unit test
 - DB
-  - come strutturarlo?
   - SQL
-- progetto unico o progetti separati?
+- architettura
+  - DB <---api----> Backend C# <---api---> frontend TS + React
+- 2 PROGETTI ASP.NET
+    1. web api project
+        - controllerApi
+    2. web application
+        - stack
+            * logica front-end w/atomic design
+                * TypeScript
+                * React
+                    -> atomo = componente React -> es. li React (option)
+                    -> molecola = compenente React composto da n atomi ->  Optionslist
+                    -> organismi = compenente React composto da molecole -> sezione selezione film (tanti ul (genere, anno))
+                    -> pages -> + organismi messi insieme (homepage)
+            * stile
+                * SCSS
+            * module bundling 
+                * Webpack
+            * task runner 
+                * Webpack
+    
